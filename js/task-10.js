@@ -25,21 +25,36 @@ function getRandomHexColor() {
 
 const boxes = document.querySelector("#boxes");
 const input = document.querySelector("input");
-const width = 30;
-const height = 30;
 
+const createBtn = document.querySelector('[data-create]');
+const destroyBtn = document.querySelector('[data-destroy]');
 
+createBtn.addEventListener("click", onCreateBtnClick);
+destroyBtn.addEventListener("click", destroyBoxes);
 
-const createBtn = document.querySelector('[data-action="data-create"]');
-const destroyBtn = document.querySelector('[data-action="data-destroy"]');
-
-
-
+function onCreateBtnClick(event) {
+  createBoxes();
+}
 
 function createBoxes(amount) {
   amount = input.value;
+
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    const size = 30 + i * 10;
+    box.style.backgroundColor = getRandomHexColor();
+    box.style.cssText = `width: ${size}px height:${size} px `;
+    boxes.append(box);
+  }
 }
 
 function destroyBoxes() {
-  
-}
+
+  }
+
+// for (let i = 0; i < amount; i++){
+//   const box = document.createElement('div');
+//   box.style.backgroundColor = getRandomHexColor();
+//   box.style.width = '30px';   //// хочу дописати + i*10 а не знаю як правильно....
+//   box.style.height = '30px';
+//   boxes.append(box);

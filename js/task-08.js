@@ -20,9 +20,11 @@ form.addEventListener("submit", (event) => {
   } = event.currentTarget;
      if (email.value === "" || password.value === "" ) {
     return alert("Please fill in all the fields!");}
-    console.log(`email: ${email.value},`,`password: ${password.value}`);
-    
-    form.reset();
+    console.log({
+    email: email.value,
+    password : password.value,
+  }  );
+  form.reset();
 });
 
 //  2 спосіб(тільки є проблема: два alert з'являється коли обидва поля не заповнені)
