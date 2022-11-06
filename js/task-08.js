@@ -16,6 +16,7 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
 
+
 //  2 спосіб(тільки є проблема: два alert з'являється коли обидва поля не заповнені)
 
 // const form = document.querySelector('.login-form');
