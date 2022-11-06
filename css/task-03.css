@@ -1,0 +1,18 @@
+li{
+    list-style: none;
+}
+.gallery{
+   display: flex;
+  justify-content: space-between;
+
+}
+
+img {
+height: 270px;/*спеціально встановила фіксовану висоту, картинки різного розміру, було не гарно */
+
+
+}
+
+ul{
+    padding-left: 0;
+}
